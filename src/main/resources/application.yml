@@ -14,4 +14,8 @@ logging:
     
 mybatis-plus:
   mapper-locations:
-  - com/mp/mapper/*.xml    
+  - com/mp/mapper/*.xml
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-value: 1
