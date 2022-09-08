@@ -20,4 +20,7 @@ public interface UserMapper extends BaseMapper<User> {
 	List<User> selectAll2(@Param(Constants.WRAPPER) Wrapper<User> wrapper);
 	
 	IPage<User> selectUserPage(Page<User> page, @Param(Constants.WRAPPER) Wrapper<User> wrapper);
+	
+	@Select("SELECT * FROM user ${ew.customSqlSegment}")
+	List<User> mySelectList(@Param(Constants.WRAPPER) Wrapper<User> wrapper);
 }

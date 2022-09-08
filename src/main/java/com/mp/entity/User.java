@@ -2,6 +2,8 @@ package com.mp.entity;
 
 import java.time.LocalDateTime;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
@@ -29,9 +31,11 @@ public class User extends Model<User> {
     private Long managerId;
 
     //创建时间
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
     //更新时间
+    @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
 
     //版本
@@ -39,5 +43,6 @@ public class User extends Model<User> {
 
     //逻辑删除标识（0->未删除，1->删除）
     @TableLogic
+    @TableField(select = false)
     private Integer deleted;
 }
