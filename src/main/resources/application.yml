@@ -4,14 +4,12 @@ spring:
     username: mp_high
     password: XueGod!@#123
     url: jdbc:p6spy:mysql://localhost:3306/mp_high?useSSL=false&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
-
 logging:
   level:
     root: warn
     com.mp.dao: trace
   pattern:
     console: '%p%m%n'
-    
 mybatis-plus:
   mapper-locations:
   - com/mp/mapper/*.xml
