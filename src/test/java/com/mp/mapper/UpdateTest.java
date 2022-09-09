@@ -36,8 +36,8 @@ public class UpdateTest {
 		UpdateWrapper<User> updateWrapper = new UpdateWrapper<>();
 		updateWrapper.eq("name", "李艺伟").eq("age", 28);
 		User user = new User();
-		user.setEmail("lyw2022@baomidou.com");
-		user.setAge(29);
+		user.setEmail("lyw202201@baomidou.com");
+		user.setAge(30);
 		int rows = this.userMapper.update(user, updateWrapper);
 		System.out.println("影响记录数：" + rows);
 	}
