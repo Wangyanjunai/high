@@ -1,6 +1,7 @@
 package com.mp.mapper;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.mp.config.MyBatisPlusConfiguration;
 import com.mp.dao.UserMapper;
 import com.mp.entity.User;
 import org.junit.Test;
@@ -24,6 +25,7 @@ public class MySelectTest {
 
     @Test
     public void select() {
+        MyBatisPlusConfiguration.myTableName.set("user_2019");
         List<User> userList = this.userMapper.selectList(null);
         userList.forEach(System.out::println);
     }
