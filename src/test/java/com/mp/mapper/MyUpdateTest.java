@@ -22,7 +22,7 @@ public class MyUpdateTest {
     @Test
     public void updateById() {
         User user = new User();
-        user.setAge(26);
+        user.setAge(28);
         user.setId(1088248166370832385L);
         int rows = this.userMapper.updateById(user);
         System.out.println("更新影响记录数：" + rows);
